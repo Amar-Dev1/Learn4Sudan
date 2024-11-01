@@ -1,8 +1,18 @@
-# React + Vite
+# Learn 4 Sudan Organization is Here !!!
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🔵 The structure of L4S website :
 
-Currently, two official plugins are available:
+                -- Currently --
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- there are main 4 pages :-
+
+1. Home Page (done) ✅
+2. About us Page (done) ✅
+3. News & Activities (in progress) ⏳
+4. Volunteering Page (in progress) ⏳
+5. Contact us (done) ✅
+
+
+- Things need backend APIs :-
+
+1. the contact us ( in footer ) needs API endpoint to sent the email to the L4S email inbox 📧 .
