@@ -1,0 +1,75 @@
+.landing {
+    height: 100%;
+    color: var(--light-color);
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.landing .main-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+    flex-basis: 45%;
+}
+
+.landing .main-text h1 {
+    font-size: 62px;
+    margin: 25px 0;
+}
+
+.help-icons {
+    font-size: 24px;
+    margin-left: 5px;
+}
+
+.graphic-landing {
+    flex-basis: 50%;
+}
+
+.graphic-landing img {
+    width: 90%;
+    height: auto;
+    object-fit: cover;
+    animation: graphLanding 1.5s ease-in-out infinite;
+}
+
+@keyframes graphLanding {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+@media (max-width:1024px) {
+    .landing .main-text {
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    .landing .main-text h1 {
+        font-size: 48px;
+    }
+
+    .landing .graphic-landing {
+        display: none;
+    }
+
+    .books-graph {
+        width: 100px;
+        height: 100px;
+        bottom: -25%;
+        right: 2%;
+    }
+}

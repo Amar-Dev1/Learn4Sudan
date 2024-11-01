@@ -1,0 +1,46 @@
+.partners-container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    position: relative;
+    
+}
+
+.partners-container .partner-logo {
+    width: 200px;
+    margin: 30px 10px;
+    opacity: 0.6;
+    filter: grayscale(100%);
+    transition: all 0.3s ease;
+}
+
+.partners-container .partner-logo:hover {
+    opacity: 1;
+    filter: none;
+}
+
+
+
+.partners-container .idea-icon {
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    right: 5%;
+    top: -15%;
+    color: white;
+    animation: ideaMoving 2s ease-in-out infinite;
+    opacity: .85;
+}
+
+@keyframes ideaMoving {
+    0% {
+        transform: scale(1.0);
+    }
+
+    50% {
+        transform: scale(1.09);
+    }
+
+    100% {
+        transform: scale(1.0);
+    }
+}

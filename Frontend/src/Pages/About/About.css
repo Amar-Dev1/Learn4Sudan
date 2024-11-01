@@ -1,0 +1,70 @@
+#about {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#about .L4s-story,
+#about .L4s-goals,
+#about .L4s-principles {
+    text-align: center;
+    padding: 24px;
+    margin-top: 24px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px var(--main-color);
+    transition: .2s;
+}
+
+#about .L4s-story:hover,
+#about .L4s-goals:hover,
+#about .L4s-principles:hover {
+    transform: scale(1.01);
+}
+
+#about .shared-title {
+    color: var(--light-color);
+    font-size: 36px;
+    margin-bottom: 28px;
+    font-weight: bold;
+}
+
+#about .phrase,
+#about .L4s-principles li {
+    color: var(--light-color);
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+
+#about .L4s-story {
+    background: linear-gradient(to right, #16b7a6, #289eb5);
+}
+
+#about .L4s-goals {
+    background: linear-gradient(to right, #5cb4ea, #653cfd);
+
+}
+
+#about .L4s-principles {
+    background: linear-gradient(to right, #620df5, #620df5);
+    background-size: cover;
+    padding-right: 15px;
+    padding-left: 0;
+}
+
+#about .L4s-principles ul {
+    text-align: start;
+    color: var(--light-color);
+}
+
+@media (max-width: 768px) {
+
+    #about .shared-title,
+    #about .L4s-principles li {
+        font-size: 18px;
+    }
+
+    #about .phrase {
+        font-size: 16px;
+    }
+
+}

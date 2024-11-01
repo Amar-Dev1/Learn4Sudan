@@ -1,0 +1,87 @@
+.Header {
+    color: var(--light-color);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(to left, #3937a0, #22222c);
+    padding: 15px 0;
+}
+.Header .navbar{
+    z-index: 99;
+}
+.Header .l4s-logo img {
+    width: 120px;
+    height: 70px;
+}
+
+.Header .navbar a {
+    color: var(--light-color);
+    margin: 10px 20px;
+    font-size: 16px;
+    position: relative;
+}
+
+.Header .navbar a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2.5px;
+    border-radius: 10px;
+    background-color: var(--light-color);
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.3s ease-in-out;
+}
+
+.Header .navbar a:hover::before {
+    width: 100%;
+}
+
+.Header button {
+    background: transparent;
+    outline: none;
+    border: none;
+    color: var(--light-color);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.Header button {
+    visibility: hidden;
+    opacity: 0;
+}
+
+@media only screen and (max-width:768px) {
+    .Header button {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .Header .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        background: linear-gradient(to left, #3937a0, #22222c);
+        transition: transform 0.3s ease-in-out;
+        transform: translateY(-100%);
+    }
+
+    .Header .navbar a {
+        display: block;
+        color: var(--light-color);
+        margin: 15px 20px;
+        font-size: 18px;
+    }
+
+    .Header .responsive-nav {
+        transform: translateY(0);
+    }
+}

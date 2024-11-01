@@ -1,0 +1,105 @@
+.footer {
+    background: linear-gradient(to left, #3937a0, #22222c);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: white;
+}
+
+.footer .contact {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.footer .contact input,
+.footer .contact textarea {
+    padding: 15px;
+    display: block;
+    outline: none;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    width: 100%;
+    transition: all .1s;
+}
+
+.footer .contact textarea {
+    height: 200px;
+}
+
+.footer .contact input:focus {
+    outline: #ddd solid 3px;
+}
+
+.footer .contact .sending-status {
+    margin-top: 10px;
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+}
+
+.footer .social-media {
+    width: 100%;
+    text-align: center;
+    margin-top: 28px;
+    margin-bottom: 20px;
+}
+
+.footer .social-media h4 {
+    margin-bottom: 32px;
+}
+
+.footer .social-media a {
+    padding: 12px;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.footer .social-media .face {
+    background-color: #3937a0;
+}
+
+.footer .social-media .email {
+    background-color: black;
+}
+
+.footer .social-media .twtr,
+.footer .social-media .lnkdn,
+.footer .social-media .tlgrm {
+    background-color: rgb(12, 90, 245);
+}
+
+.footer .social-media .ytub {
+    background-color: rgb(240, 15, 15);
+}
+
+.footer .social-media .icon {
+    color: white;
+    font-size: 28px ;
+}
+
+.footer .copyrights {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.footer .copyrights p {
+    font-size: 18px;
+}
+
+@media (max-width:768px) {
+    .footer .social-media a{
+        padding: 10px;
+    }
+    .footer .social-media .icon{
+        font-size:28px ;
+    }
+    .footer .copyrights p {
+        font-size: 10px;
+    }
+}

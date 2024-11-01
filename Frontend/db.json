@@ -1,0 +1,50 @@
+{
+    "news": [
+      {
+        "id": 1,
+        "title": "عنوان الخبر 1",
+        "image": "image-url-1",
+        "category": "الأخبار",
+        "date": "2023-01-01"
+      },
+      {
+        "id": 2,
+        "title": "عنوان الخبر 2",
+        "image": "image-url-2",
+        "category": "الأخبار",
+        "date": "2023-01-02"
+      }
+    ],
+    "activities": [
+      {
+        "id": 3,
+        "title": "عنوان النشاط 1",
+        "image": "image-url-3",
+        "category": "الأنشطة",
+        "date": "2023-01-03"
+      },
+      {
+        "id": 4,
+        "title": "عنوان النشاط 2",
+        "image": "image-url-4",
+        "category": "الأنشطة",
+        "date": "2023-01-04"
+      }
+    ],
+    "projects": [
+      {
+        "id": 5,
+        "title": "عنوان المشروع 1",
+        "image": "image-url-5",
+        "category": "المشاريع",
+        "date": "2023-01-05"
+      },
+      {
+        "id": 6,
+        "title": "عنوان المشروع 2",
+        "image": "image-url-6",
+        "category": "المشاريع",
+        "date": "2023-01-06"
+      }
+    ]
+  }
