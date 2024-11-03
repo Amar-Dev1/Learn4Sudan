@@ -16,3 +16,8 @@
 - Things need backend APIs :-
 
 1. the contact us ( in footer ) needs API endpoint to sent the email to the L4S email inbox 📧 .
+
+
+⭕ How to run the project loacally ⭕
+- install vite locally by running : `npm install vite`
+- running the project by running : `npm run dev`

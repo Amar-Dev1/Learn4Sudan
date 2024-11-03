@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { HomePage, L4SNews, About, Volunteer, Header, Footer } from './index';
 import { FaArrowUp } from 'react-icons/fa';
+import BlogDetail from './Pages/News/BlogDetail';
 
 // the main page title
 export const pageTitle = ' منظمة تعلم من أجل السودان';
@@ -34,6 +35,8 @@ function App() {
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/L4SNews' element={<L4SNews />} />
+        <Route path='/L4SNews/:id' element={<BlogDetail />} />
+        <Route path='/L4SNews/:category/:id' element={<BlogDetail />} />
         <Route path='/About' element={<About />} />
         <Route path='/Volunteer' element={<Volunteer />} />
       </Routes>
