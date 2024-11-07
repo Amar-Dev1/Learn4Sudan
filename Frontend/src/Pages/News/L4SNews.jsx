@@ -6,7 +6,7 @@ import { useState } from 'react';
 
 const L4SNews = ({ blogs }) => {
   // Use a state to keep track of the selected category
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState('الكل');
 
   // Extract unique categories from blogs
   const categories = [...new Set(blogs.flatMap(blog => blog.categories.map(cat => cat.title)))];
@@ -17,7 +17,7 @@ const L4SNews = ({ blogs }) => {
   };
 
   // Filter blogs based on selected category
-  const filteredBlogs = selectedCategory === 'all'
+  const filteredBlogs = selectedCategory === 'الكل'
     ? blogs
     : blogs.filter(blog => blog.categories.some(cat => cat.title === selectedCategory));
 
@@ -27,7 +27,7 @@ const L4SNews = ({ blogs }) => {
 
       <Row className='mb-5 d-flex justify-content-center'>
         {/* Render category buttons */}
-        {['all', ...categories].map((cat) => (
+        {['الكل', ...categories].map((cat) => (
           <Col key={cat} lg={2} sm={12} md={4} className='d-flex justify-content-center align-items-center mb-4'>
             <button
               className={`${selectedCategory === cat ? 'active' : 'cat-btns'}`}
