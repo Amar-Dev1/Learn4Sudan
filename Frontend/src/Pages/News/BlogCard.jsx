@@ -11,8 +11,8 @@ const BlogCard = ({ slug, title, Image, category, date }) => {
     }) : "No date available";
 
     return (
-        <Link to={`/L4SNews/${category}/${slug}`}>
-            <div className="blog-card">
+        <div className="blog-card">
+                <Link to={`/L4SNews/${category}/${slug}`}>
         <div className="img-wrapper">
             <img src={Image} alt={title} />
         </div>
@@ -22,8 +22,8 @@ const BlogCard = ({ slug, title, Image, category, date }) => {
             <small className='date'>{formattedDate}</small>
             <span className='read-more'>اقرأ المزيد <FaCirclePlus /></span>
         </div>
-            </div>
     </Link>
+            </div>
     )
 }
 
