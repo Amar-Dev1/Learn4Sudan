@@ -1,75 +1,45 @@
 import { Container, Row, Col } from 'react-bootstrap';
 import './L4SNews.css';
-
 import { useParams } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { FaCalendarDays, FaNewspaper } from 'react-icons/fa6';
+import { IoMdArrowRoundBack } from "react-icons/io";
+import { PortableText } from '@portabletext/react';
+import { Link } from 'react-router-dom';
 
-import axios from 'axios';
+const BlogDetail = ({ blogs }) => {
+    const { slug } = useParams();
+    const blogPost = blogs ? blogs.find(blog => blog.slug.current === slug) : null; // Ensure slug is accessed correctly
 
-// for testing
-import imgblog from '../../assets/education.jpg'
-
-const BlogDetail = () => {
-
-    // get the blog id from the URL
-    const { id, category: urlCategory } = useParams();
-
-    // make a state hold the blog post data
-    const [blogPost, setBlogPost] = useState(null);
-    const [loading, setLoading] = useState(true); // State to track loading
-    const [error, setError] = useState(null); // State to track errors
-
-    // fetch the blog post data
-    const fetchBlogPostData = async () => {
-        try {
-            const postData = await axios.get(`http://localhost:3020/posts/${id}`);
-            setBlogPost(postData.data);
-        } catch (err) {
-            setError("Post not found"); // Set error message if fetch fails
-        } finally {
-            setLoading(false); // Set loading to false after fetch attempt
-        }
+    if (!blogPost) {
+        return <h1>Oops! Blog not found. ❌</h1>;
     }
 
-    useEffect(() => {
-        fetchBlogPostData();
-    }, [id]);
-
-    // Handle loading and error states
-    if (loading) return <h3>Loading...</h3>;
-    if (error) return <div>{error}</div>;
-
-    const { title, date, category, image, content } = blogPost;
-
+    const imageUrl = blogPost.mainImage?.asset?.url;
 
     return (
-
         <Container id='blog-detail' dir='rtl'>
-            {/* this row hold the image, category and date */}
-            <Row className='d-flex justify-content-center align-items-center mt-5'>
+            <Link to={`/L4SNews/`}><button className='l4s-btn back-btn'><IoMdArrowRoundBack/></button></Link>
+            <Row className='d-flex justify-content-center align-items-center mb-5 mt-5'>
                 <Col lg={6} md={12} sm={12}>
-                    <h2 className='blog-title'>{title}</h2>
-
+                    <h2 className='blog-title'>{blogPost.title}</h2>
                 </Col>
                 <Col lg={6} md={12} sm={12}>
                     <div className="blog-head">
-                        <img src={imgblog} alt={title} />
-                        <p>{date}</p>
-                        <p>{category}</p>
+                        {imageUrl && <img src={imageUrl} alt={blogPost.title} />}
+                        <p className='blog-cat'><FaNewspaper /> {blogPost.categories?.map(cat => cat.title).join(', ')}</p>
+                        <p className='blog-date'><FaCalendarDays /> {new Date(blogPost.publishedAt).toLocaleDateString()}</p>
                     </div>
                 </Col>
             </Row>
-            {/* this hold the main title */}
-            <Row>
-                <div className="blog-content">{content}</div>
+            <Row className='d-flex justify-content-center align-items-center mt-5'>
+                <Col lg={12} md={12} sm={12}>
+                    <div className="blog-body">
+                        <PortableText value={blogPost.body} />
+                    </div>
+                </Col>
             </Row>
-
-
-
-            <div className="blog-body"></div>
         </Container>
-
-    )
+    );
 }
 
 export default BlogDetail;

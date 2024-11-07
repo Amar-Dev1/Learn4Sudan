@@ -1,22 +1,27 @@
 import './L4SNews.css';
-import Img from '../../assets/education.jpg'
 import { FaCircle } from 'react-icons/fa';
 import { FaCirclePlus } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
 
-const BlogCard = (props) => {
+const BlogCard = ({ slug, title, Image, category, date }) => {
+    const formattedDate = date ? new Date(date).toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric"
+    }) : "No date available";
+
     return (
-        <Link to={`/L4SNews/${props.BlogCategory}/${props.id}`} className='blog-card'>
-            <div className="img-wrapper">
-                <img src={Img} alt="BlogImg" />
-            </div>
-            <div className="card-text">
-                <span className='cat'><FaCircle className='cat-icon' /> {props.BlogCategory}</span>
-                <h3 className='title'>{props.BlogTitle}</h3>
-                <small className='date'>{props.BlogDate}</small>
-                <span className='read-more'>اقرأ المزيد <FaCirclePlus /></span>
-            </div>
-        </Link>
+        <Link to={`/L4SNews/${category}/${slug}`} className='blog-card'>
+        <div className="img-wrapper">
+            <img src={Image} alt={title} />
+        </div>
+        <div className="card-text">
+            <span className='cat'><FaCircle className='cat-icon' /> {category}</span>
+            <h3 className='title'>{title}</h3>
+            <small className='date'>{formattedDate}</small>
+            <span className='read-more'>اقرأ المزيد <FaCirclePlus /></span>
+        </div>
+    </Link>
     )
 }
 
