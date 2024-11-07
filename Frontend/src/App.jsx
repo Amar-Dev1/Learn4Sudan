@@ -39,7 +39,7 @@ function App() {
 
   const projectId = import.meta.env.VITE_SANITY_PROJECTID;
   const dataset = import.meta.env.VITE_SANITY_DATASET;
-  const apiUrl = `https://${projectId}.api.sanity.io/v1/data/query/${dataset}`;
+  const apiUrl = `https://${projectId}.api.sanity.io/v2022-03-07/data/query/${dataset}`;
 
 
   const fetchBlogs = async () => {
