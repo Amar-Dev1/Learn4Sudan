@@ -9,8 +9,8 @@
 /* styling blog card */
 
 .blog-card {
-    width: 350px;
-    height: 380px;
+    width: 370px;
+    height: 470px;
     box-shadow: 1px 1px 4px #ddd;
     border-radius: 5px;
     position: relative;
@@ -29,6 +29,7 @@
     width: 100%;
     height: 100%;
     transition: .4s;
+    object-fit: cover;
 }
 
 .blog-card:hover .img-wrapper img {
@@ -45,6 +46,7 @@
 
 .blog-card .card-text {
     padding: 10px;
+    height: 40%;
 }
 
 .blog-card .card-text .title {

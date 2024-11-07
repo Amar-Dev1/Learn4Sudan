@@ -16,10 +16,12 @@ const L4SNews = ({ blogs }) => {
     setSelectedCategory(category);
   };
 
-  // Filter blogs based on selected category
-  const filteredBlogs = selectedCategory === 'الكل'
-    ? blogs
-    : blogs.filter(blog => blog.categories.some(cat => cat.title === selectedCategory));
+// Filter and sort blogs based on selected category and date
+const filteredBlogs = selectedCategory === 'الكل'
+  ? blogs.sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt)) // Sort by date if 'الكل' is selected
+  : blogs
+      .filter(blog => blog.categories.some(cat => cat.title === selectedCategory))
+      .sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt)); // Sort filtered blogs by date
 
   return (
     <Container id='l4s-news' dir='rtl'>
@@ -38,7 +40,7 @@ const L4SNews = ({ blogs }) => {
       <Row className='d-flex justify-content-center'>
         {/* Render filtered blogs */}
         {filteredBlogs.map(blog => (
-          <Col key={blog._id} sm={12} md={6} lg={4} className='mb-4'>
+          <Col key={blog._id} sm={12} md={6} lg={4} className='d-flex justify-content-center mb-4'>
             <BlogCard
               slug={blog.slug.current}
               title={blog.title}
