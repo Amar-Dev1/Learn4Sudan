@@ -2,7 +2,7 @@ import { pageTitle } from '../../App'
 
 import { Container } from 'react-bootstrap';
 import { Landing, Partners } from '../../index';
-import { VolunTypes } from '../Volunteer/Volunteer';
+import { VolunTypes, VolunApply } from '../Volunteer/Volunteer';
 import '../../App.css';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
@@ -20,10 +20,10 @@ const HomePage = () => {
                 <Landing />
             </Container>
             <Partners />
-            <div className="intro-volunteer" id='intro-volunteer'>
+            <div className="intro-volunteer" id='intro-volunteer' dir='rtl'>
                 <VolunTypes />
+                <VolunApply />
                 <Link to={"/Volunteer"}><button className='l4s-btn'>! استكشف المزيد </button></Link>
-
 
                 {/* I`m completely bad in naming variables 😂💔 */}
 

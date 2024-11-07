@@ -60,6 +60,34 @@
     z-index: 1;
 }
 
+#volun-apply .soon-phrase {
+    text-align: center;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid var(--dark-color);
+    background-color: var(--light-color);
+    border-radius: 40px;
+    padding: 5px;
+    animation: soonAnimation 3s ease-in-out infinite;
+}
+
+@keyframes soonAnimation {
+    0% {
+        background-color: var(--light-color);
+    }
+
+    50% {
+        background-color: var(--main-color);
+        color: var(--light-color);
+        width: 60%;
+    }
+
+    100% {
+        background-color: var(--light-color);
+    }
+}
+
 @media (max-width: 768px) {
     #volun-conditions ul li {
         font-size: 18px;

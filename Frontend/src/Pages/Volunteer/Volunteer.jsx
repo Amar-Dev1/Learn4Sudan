@@ -24,7 +24,7 @@ const Volunteer = () => {
       <MainTitle title="تطوع معنا" />
       <VolunTypes />
       <VolunConditions />
-      <VolunGuide />
+      <VolunApply />
     </Container>
   )
 }
@@ -64,11 +64,11 @@ export const VolunConditions = () => {
     </Container>
   )
 }
-
-export const VolunGuide = () => {
+export const VolunApply = () => {
   return (
-    <Container id='volun-guide'>
-
+    <Container id='volun-apply'>
+      <MainTitle title="التقديم للتطوع" />
+      <h3 className='soon-phrase'>قريباً ... 🔥</h3>
     </Container>
   )
 }

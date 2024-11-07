@@ -12,18 +12,18 @@ const BlogCard = ({ slug, title, Image, category, date }) => {
 
     return (
         <div className="blog-card">
-                <Link to={`/L4SNews/${category}/${slug}`}>
-        <div className="img-wrapper">
-            <img src={Image} alt={title} />
+            <Link to={`/L4SNews/${category}/${slug}`}>
+                <div className="img-wrapper">
+                    <img src={Image} alt={title} />
+                </div>
+                <div className="card-text">
+                    <span className='cat'><FaCircle className='cat-icon' /> {category}</span>
+                    <h3 className='title'>{title}</h3>
+                    <small className='date'>{formattedDate}</small>
+                    <span className='read-more'>اقرأ المزيد <FaCirclePlus /></span>
+                </div>
+            </Link>
         </div>
-        <div className="card-text">
-            <span className='cat'><FaCircle className='cat-icon' /> {category}</span>
-            <h3 className='title'>{title}</h3>
-            <small className='date'>{formattedDate}</small>
-            <span className='read-more'>اقرأ المزيد <FaCirclePlus /></span>
-        </div>
-    </Link>
-            </div>
     )
 }
 
