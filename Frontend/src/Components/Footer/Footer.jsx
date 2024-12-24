@@ -64,11 +64,11 @@ const Footer = () => {
           <Col xl={4} md={4} sm={12}>
             <div className='social-media'>
               <h4>تابعنا على</h4>
-              <a href="https://web.facebook.com/Learn4Sudan" className='face'><FaFacebook className='icon' /></a>
-              <a href="mailto:HR@Learn4Sudan.com" className='email'><FaEnvelope className='icon' /></a>
-              <a href="https://www.linkedin.com/company/learn-for-sudan" className='lnkdn'><FaLinkedin className='icon' /></a>
-              <a href="https://www.youtube.com/channel/UCPZa4wbTIP1DHb6zcz0GmxA" className='ytub'><FaYoutube className='icon' /></a>
-              <a href="https://t.me/L4schannel" className='tlgrm'><FaTelegram className='icon' /></a>
+              <a href="https://web.facebook.com/Learn4Sudan" className='face' target="blank"><FaFacebook className='icon' /></a>
+              <a href="mailto:HR@Learn4Sudan.com" className='email' target="blank"><FaEnvelope className='icon' /></a>
+              <a href="https://www.linkedin.com/company/learn-for-sudan" className='lnkdn' target="blank"><FaLinkedin className='icon' /></a>
+              <a href="https://www.youtube.com/channel/UCPZa4wbTIP1DHb6zcz0GmxA" className='ytub' target="blank"><FaYoutube className='icon' /></a>
+              <a href="https://t.me/L4schannel" className='tlgrm' target="blank"><FaTelegram className='icon' /></a>
             </div>
           </Col>
         </Row>
