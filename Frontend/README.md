@@ -11,7 +11,7 @@
 1. Home Page (done) ✅
 2. About us Page (done) ✅
 3. News & Activities (in progress) ✅
-4. Volunteering Page (in progress) ⏳
+4. Volunteering Page (in progress) ✅
 5. Contact us (done) ✅
 
 
